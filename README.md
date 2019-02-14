@@ -1,5 +1,7 @@
 # Egg-Webpack-Starter
 
+[![hits][hits-image]][hits-url]
+
 本项目的主要目的是展示如何使用 Egg + Webpack 搭建一套前后端统一的开发环境，主要包括：
 
 - 后端 Node.js 使用 Egg 框架
@@ -171,3 +173,6 @@ export default hot(App)
 ## 5. LICENSE
 
 MIT.
+
+[hits-image]: http://hits.dwyl.io/keenwon/Egg-Webpack-Starter.svg
+[hits-url]: https://github.com/keenwon/Egg-Webpack-Starter
