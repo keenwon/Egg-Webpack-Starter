@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1' />
+  <title>Egg-Webpack-Starter</title>
+  {{#unless isDev}}
+  <link rel="stylesheet" type="text/css" media="all" href="{{manifest.[vendors.css]}}" />
+  <link rel="stylesheet" type="text/css" media="all" href="{{manifest.[app.css]}}" />
+  {{/unless}}
+</head>
+
+<body>
+  <div id="root"></div>
+  {{#if isDev}}
+  <script type='text/javascript' src="/public/static/app.js"></script>
+  {{else}}
+  <script type='text/javascript' src="{{manifest.[runtime.js]}}"></script>
+  <script type='text/javascript' src="{{manifest.[vendors.js]}}"></script>
+  <script type='text/javascript' src="{{manifest.[app.js]}}"></script>
+  {{/if}}
+</body>
+
+</html>

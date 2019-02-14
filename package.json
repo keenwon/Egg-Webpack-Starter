@@ -1,0 +1,88 @@
+{
+  "private": true,
+  "name": "egg-webpack-starter",
+  "version": "1.0.0",
+  "description": "egg + webpack",
+  "scripts": {
+    "dev": "egg-bin dev",
+    "start": "egg-scripts start --daemon",
+    "stop": "egg-scripts stop",
+    "test": "eslint \"**/*.+(js|jsx)\" --fix",
+    "build": "rimraf ./app/public/static && NODE_ENV=production webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keenwon/Egg-Webpack-Starter.git"
+  },
+  "keywords": [
+    "egg",
+    "webpack",
+    "webpack-dev-server",
+    "koa",
+    "hot reload"
+  ],
+  "author": {
+    "name": "keenwon",
+    "email": "semanwmj@gmail.com",
+    "url": "http://keenwon.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keenwon/Egg-Webpack-Starter/issues"
+  },
+  "homepage": "https://github.com/keenwon/Egg-Webpack-Starter#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.3.1",
+    "core-js": "^2.6.4",
+    "egg": "^2.14.2",
+    "egg-scripts": "^2.11.0",
+    "egg-view-handlebars": "^2.0.1",
+    "normalize.css": "^8.0.1",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-hot-loader": "^4.6.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "acorn": "^6.0.2",
+    "acorn-jsx": "^5.0.0",
+    "autoprefixer": "^9.4.7",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-module-resolver": "^3.2.0",
+    "babel-plugin-react-css-modules": "^5.0.0",
+    "css-loader": "^2.1.0",
+    "egg-bin": "^4.10.0",
+    "egg-webpack": "^4.4.9",
+    "eslint": "^5.13.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-standard-react": "^7.0.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-standard": "^4.0.0",
+    "espree": "^4.1.0",
+    "file-loader": "^3.0.1",
+    "mini-css-extract-plugin": "^0.5.0",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-sass": "^0.3.5",
+    "postcss-scss": "^2.0.0",
+    "rimraf": "^2.6.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.1.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-hot-middleware": "^2.24.3",
+    "webpack-manifest-plugin": "^2.0.4",
+    "webpack-merge": "^4.2.1"
+  }
+}

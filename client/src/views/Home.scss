@@ -1,0 +1,30 @@
+.home {
+  width: 100%;
+  height: auto;
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
+
+  .egg {
+    color: #333;
+  }
+
+  .webpack {
+    color: #09f;
+  }
+
+  .plus {
+    color: #666;
+    font-weight: bold;
+    padding: 0 10px;
+  }
+
+  p {
+    margin: 0 0 5px 0;
+  }
+
+  .link {
+    color: #999;
+    font-size: 12px;
+  }
+}
