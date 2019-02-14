@@ -6,7 +6,7 @@
 - 前端使用基于 webpack 的工作流，与具体框架无关（本项目使用 react 做演示）
 - 开发过程中无需分别启动前端与后端应用（基于 egg-webpack）
 
-## 快速使用
+## 1. 快速使用
 
 1. clone 本项目
 
@@ -39,7 +39,7 @@ npm start
 npm stop
 ```
 
-## 目录结构
+## 2. 目录结构
 
 ```shell
 .
@@ -55,25 +55,25 @@ npm stop
 ├── config              # egg config
 ```
 
-## Egg + Webpack
+## 3. Egg + Webpack
 
 > 本节详细讲述整个搭建过程，如果你只是想简单使用，请参考前面的“快速使用”
 
-### Egg
+### 3.1. Egg
 
 首先，你得有个一 egg 应用，具体可以查看[官方文档](https://eggjs.org)，此处不再赘述。
 
-### 添加 Webpack
+### 3.2. 添加 Webpack
 
 我们使用 [egg-webpack](https://github.com/easy-team/egg-webpack) 实现基于 egg 的 webpack 编译和热更新。关于 egg-webpack 的更多内容可以看[这里](http://hubcarl.github.io/blog/2017/04/15/egg-webpack/)。
 
-1. 安装和配置 egg-webpack
+#### 3.2.1. 安装和配置 egg-webpack
 
 ```shell
 npm install egg-webpack --save-dev
 ```
 
-2. 配置 egg
+#### 3.2.2. 配置 egg
 
 启用 plugin：
 
@@ -83,7 +83,7 @@ npm install egg-webpack --save-dev
 
 exports.webpack = {
   enable: true,
-  package: 'egg-webpack'
+  package: "egg-webpack"
 }
 ```
 
@@ -94,13 +94,13 @@ exports.webpack = {
 
 exports.webpack = {
   port: 9000,
-  webpackConfigList: [require('../webpack.config')]
+  webpackConfigList: [require("../webpack.config")]
 }
 ```
 
 这里指定 `9000` 端口，后面会用到。
 
-3. 配置热更新
+#### 3.2.3. 配置热更新
 
 安装 `webpack-hot-middleware`：
 
@@ -116,8 +116,8 @@ module.exports = {
   entry: {
     app: [
       // 注意端口和前面设置的一致
-      'webpack-hot-middleware/client?path=http://127.0.0.1:9000/__webpack_hmr&reload=true',
-      '../src/index.js'
+      "webpack-hot-middleware/client?path=http://127.0.0.1:9000/__webpack_hmr&reload=true",
+      "../src/index.js"
     ]
   },
   plugins: [new webpack.HotModuleReplacementPlugin()]
@@ -131,7 +131,7 @@ module.exports = {
 // babel.config.js
 module.exports = {
   // ...
-  plugins: ['react-hot-loader/babel']
+  plugins: ["react-hot-loader/babel"]
   // ...
 }
 ```
@@ -139,15 +139,15 @@ module.exports = {
 修改入口组件，使用 `react-hot-loader` 提供的 hoc：
 
 ```jsx
-import React from 'react'
-import { hot } from 'react-hot-loader/root'
+import React from "react"
+import {hot} from "react-hot-loader/root"
 
 const App = () => <div>App</div>
 
 export default hot(App)
 ```
 
-4. 前后端对接
+#### 3.2.4. 前后端对接
 
 这里使用 handlebar 模板，开发模式写死就好了， 生产环境读取 `manifest`：
 
@@ -160,3 +160,14 @@ export default hot(App)
 <script type='text/javascript' src="{{manifest.[app.js]}}"></script>
 {{/if}}
 ```
+
+## 4. 参考
+
+- [Egg](https://eggjs.org/)
+- [Webpack](https://webpack.js.org)
+- [egg-webpack](https://github.com/easy-team/egg-webpack)
+- [webpack-hot-middleware](https://github.com/webpack-contrib/webpack-hot-middleware)
+
+## 5. LICENSE
+
+MIT.
