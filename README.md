@@ -163,14 +163,20 @@ export default hot(App)
 {{/if}}
 ```
 
-## 4. 参考
+## 4. 说明
+
+### 4.1. 为什么 `package.json` 会有 acorn 相关的依赖？
+
+eslint 和其他包都可能依赖 acorn，会造成冲突，具体查看 https://github.com/eslint/espree/issues/393
+
+## 5. 参考
 
 - [Egg](https://eggjs.org/)
 - [Webpack](https://webpack.js.org)
 - [egg-webpack](https://github.com/easy-team/egg-webpack)
 - [webpack-hot-middleware](https://github.com/webpack-contrib/webpack-hot-middleware)
 
-## 5. LICENSE
+## 6. LICENSE
 
 MIT.
 
