@@ -9,7 +9,7 @@ const Home = () => (
       <span styleName='webpack'>Webpack</span>
     </p>
     <p>
-      <a styleName="link" target="_blank" href='https://github.com/keenwon/Egg-Webpack-Starter'>
+      <a styleName='link' target='_blank' href='https://github.com/keenwon/Egg-Webpack-Starter'>
         https://github.com/keenwon/Egg-Webpack-Starter
       </a>
     </p>
