@@ -19,6 +19,11 @@ module.exports = merge(common, {
     publicPath: '/public/static/',
     filename: '[name].js'
   },
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    }
+  },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   module: {
     rules: [
